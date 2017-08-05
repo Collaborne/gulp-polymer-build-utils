@@ -1,5 +1,6 @@
 'use strict';
 
+const gulpIf = require('gulp-if');
 const lazypipe = require('lazypipe');
 const replace = require('gulp-replace');
 const size = require('gulp-size');
@@ -18,5 +19,5 @@ function injectCustomElementsES5Adaptor() {
 };
 
 module.exports = lazypipe()
-	.pipe(injectCustomElementsES5Adaptor)
+	.pipe(() => gulpIf('*.html', injectCustomElementsES5Adaptor()))
 	.pipe(() => size({title: 'inject-custom-elements-es5-adapter'}));
