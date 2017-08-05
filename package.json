@@ -16,7 +16,7 @@
     "url": "https://github.com/Collaborne/gulp-polymer-build-utils/issues"
   },
   "homepage": "https://github.com/Collaborne/gulp-polymer-build-utils#readme",
-  "devDependencies": {
+  "dependencies": {
     "gulp-babel": "^6.1.2",
     "gulp-crisper": "^1.1.0",
     "gulp-filter": "^5.0.1",
