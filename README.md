@@ -8,7 +8,7 @@ Install the build-utils:
 npm install gulp-polymer-build-utils --save
 ```
 
-Use the plugins and tasks in the `gulpfile.js`:
+Use the plugins and tasks in the Gulp config file `gulpfile.js`:
 
 ```
 const gulp = require('gulp');
