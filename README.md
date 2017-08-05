@@ -16,15 +16,15 @@ const polymerBuildUtils = require('gulp-polymer-build-utils');
 const runSequence = require('run-sequence');
 
 gulp.task('prepare-dist', ['fetch-git-rev'], function() {
-	return polymerBuildUtils.polymerBuild(require('./polymer.json'))
-		.pipe(polymerBuildUtils.addCspCompliance())
-		.pipe(polymerBuildUtils.addCacheBusting())
-		.pipe(polymerBuildUtils.optimizeAssets())
-		.pipe(polymerBuildUtils.injectCustomElementsEs5Adapter())
-		.pipe(gulp.dest('dist'));
+  return polymerBuildUtils.polymerBuild(require('./polymer.json'))
+    .pipe(polymerBuildUtils.addCspCompliance())
+    .pipe(polymerBuildUtils.addCacheBusting())
+    .pipe(polymerBuildUtils.optimizeAssets())
+    .pipe(polymerBuildUtils.injectCustomElementsEs5Adapter())
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', function(cb) {
-	runSequence('prepare-dist', 'inline-references', cb);
+  runSequence('prepare-dist', 'inline-references', cb);
 });
 ```
