@@ -8,3 +8,4 @@ exports.polymerBuild = require('./polymer-build.js');
 
 // Import tasks
 require('./inline-references-task.js');
+require('./polymer-test-task.js');
