@@ -2,6 +2,8 @@
 
 const build = require('polymer-build');
 const merge = require('merge-stream');
+const path = require('path');
+const rename = require('gulp-rename');
 const size = require('gulp-size');
 
 /**
@@ -10,6 +12,11 @@ const size = require('gulp-size');
  * @returns 
  */
 function polymerBuild(config) {
+	const skipRootFolder = function(file) {
+		const rootFolder = config.root || '.';
+		file.dirname = path.relative(rootFolder, file.dirname);
+	};
+
 	const project = new build.PolymerProject(config);
 
 	const bundler = project.bundler({
@@ -20,7 +27,8 @@ function polymerBuild(config) {
 
 	return merge(project.sources(), project.dependencies())
 		.pipe(bundler)
-		.pipe(size({title: 'polymer-bundler'}));
+		.pipe(size({title: 'polymer-bundler'}))
+		.pipe(rename(skipRootFolder));
 };
 
 module.exports = polymerBuild;
