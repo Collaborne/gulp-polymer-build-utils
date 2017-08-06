@@ -4,19 +4,16 @@ const gulp = require('gulp');
 const wct = require('web-component-tester/runner/test');
 
 const argv = require('yargs')
-	.option('browsers', {
+	.array('browsers', {
 		describe: 'Browsers on which tests should run',
-		type: 'array',
 		default: ['chrome', 'firefox']
 	})
-	.option('debug', {
+	.boolean('debug', {
 		describe: 'True to keep browser open for debugging',
-		type: 'boolean',
 		default: false,
 	})
-	.option('suites', {
+	.array('suites', {
 		describe: 'Test suite to executed',
-		type: 'array',
 		default: ['']
 	})
 	.help()
