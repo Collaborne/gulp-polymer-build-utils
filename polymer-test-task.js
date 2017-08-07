@@ -12,7 +12,7 @@ const argv = require('yargs')
 	.option('debug', {
 		describe: 'True to keep browser open for debugging',
 		default: false,
-		type: 'array',
+		type: 'boolean',
 	})
 	.option('suites', {
 		describe: 'Test suite to executed',
