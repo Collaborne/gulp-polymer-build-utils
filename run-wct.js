@@ -6,7 +6,7 @@ const wct = require('web-component-tester/runner/test');
 /**
  * Runs the tests in Web Component Tester
  * 
- * @param args {Object} Command line argument for tests
+ * @param {Object} args Command line argument for tests
  * 
  * NB: This is a copy of the wct:local task from web-component-tester, with additional logic to override some configuration settings.
  */
