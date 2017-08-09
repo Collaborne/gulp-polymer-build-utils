@@ -17,6 +17,7 @@ gulp.task('inline-references', function() {
 				'config.js',
 				'bower_components/webcomponentsjs/webcomponents-loader.js',
 				'elements/elements.html',
+				'scripts/app.*.js',
 			],
 		}))
 		.pipe(size({title: 'inline:'}))
