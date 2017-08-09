@@ -9,6 +9,7 @@ const size = require('gulp-size');
 /**
  * Executes the polymer-build, which a.o. vulcanizes and minifies the HTML
  * 
+ * @param {Object} config Content of polymer.json
  * @returns 
  */
 function polymerBuild(config) {
