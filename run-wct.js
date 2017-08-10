@@ -10,14 +10,14 @@ const wct = require('web-component-tester/runner/test');
  * 
  * NB: This is a copy of the wct:local task from web-component-tester, with additional logic to override some configuration settings.
  */
-exports.runWct = function runWct({ suites, browsers, debug } = args) {
-	const suitesPaths = suites.map(suite => `test/${suite}`);
+exports.runWct = function runWct({ suite, browser, debug } = args) {
+	const suitesPaths = suite.map(_suite => `test/${_suite}`);
 	const wctConfig = {
 		root: 'app',
 		suites: suitesPaths,
 		plugins: {
 			local: {
-				browsers: browsers
+				browsers: browser
 			},
 			sauce: false
 		},
