@@ -17,7 +17,7 @@ const gulp = require('gulp');
 const polymerBuildUtils = require('gulp-polymer-build-utils');
 const runSequence = require('run-sequence');
 
-gulp.task('prepare-dist', ['fetch-git-rev'], function() {
+gulp.task('prepare-dist', function() {
   return polymerBuildUtils.polymerBuild(require('./polymer.json'))
     .pipe(polymerBuildUtils.addCspCompliance())
     .pipe(polymerBuildUtils.addCacheBusting())
