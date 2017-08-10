@@ -38,7 +38,7 @@ exports.runWct = function runWct({ suites, browsers, debug } = args) {
  * @param {Object} yargs Yargs instance
  */
 exports.addYargs = function addWctYargs(yargs) {
-	return yargs.option('browsers', {
+	return yargs.option('browser', {
 		describe: 'Browsers on which tests should run',
 		default: ['chrome', 'firefox'],
 		type: 'array',
@@ -48,7 +48,7 @@ exports.addYargs = function addWctYargs(yargs) {
 		default: false,
 		type: 'boolean',
 	})
-	.option('suites', {
+	.option('suite', {
 		describe: 'Test suites to executed',
 		default: [''],
 		type: 'array',
