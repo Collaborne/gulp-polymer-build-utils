@@ -3,6 +3,8 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/Collaborne/gulp-polymer-build-utils.svg)](https://greenkeeper.io/)
 Utils to simplify building Polymer applications
 
+See this [blog post](https://medium.com/collaborne-engineering/building-polymer-app-with-gulp-dee266d348df) about the background and functionality of the gulp plugins.
+
 ## Usage
 
 Install the build-utils:
