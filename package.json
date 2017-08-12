@@ -1,6 +1,6 @@
 {
   "name": "gulp-polymer-build-utils",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "Utils to simplify building Polymer applications",
   "main": "index.js",
   "scripts": {
