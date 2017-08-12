@@ -25,7 +25,7 @@ module.exports = lazypipe()
 	.pipe(() => size({title: 'Babel ES6->ES5'}))
 
 	// Minify code and HTML
-	.pipe(() => gulpIf(['elements/*.js', 'scripts/*.js' ], uglify().on('error', logError))))
+	.pipe(() => gulpIf(['elements/*.js', 'scripts/*.js' ], uglify().on('error', logError)))
 	.pipe(() => size({title: 'Uglify JavaScript'}))
 	.pipe(() => gulpIf('*.css', minifyCss()))
 	.pipe(() => size({title: 'Minimize CSS'}))
