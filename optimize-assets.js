@@ -2,7 +2,6 @@
 
 const babel = require('gulp-babel');
 const gulpIf = require('gulp-if');
-const gulpIgnore = require('gulp-ignore');
 const htmlmin = require('gulp-htmlmin');
 const lazypipe = require('lazypipe');
 const minifyCss = require('gulp-minify-css');
@@ -26,7 +25,7 @@ module.exports = lazypipe()
 	.pipe(() => size({title: 'Babel ES6->ES5'}))
 
 	// Minify code and HTML
-	.pipe(() => gulpIf('*.js', gulpIgnore.exclude('*custom-elements-es5-adapter*', uglify().on('error', logError))))
+	.pipe(() => gulpIf(['elements/*.js', 'scripts/*.js' ], uglify().on('error', logError))))
 	.pipe(() => size({title: 'Uglify JavaScript'}))
 	.pipe(() => gulpIf('*.css', minifyCss()))
 	.pipe(() => size({title: 'Minimize CSS'}))
