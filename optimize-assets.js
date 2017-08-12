@@ -27,7 +27,7 @@ module.exports = lazypipe()
 
 	// Minify code and HTML
 	.pipe(() => gulpIf('*.js', gulpIgnore.exclude('*custom-elements-es5-adapter*', uglify().on('error', logError))))
-	.pipe(() => size({title: 'Add es5-adapter'}))
+	.pipe(() => size({title: 'Uglify JavaScript'}))
 	.pipe(() => gulpIf('*.css', minifyCss()))
 	.pipe(() => size({title: 'Minimize CSS'}))
 	.pipe(() => gulpIf('*.html', htmlmin({
