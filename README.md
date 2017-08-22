@@ -1,6 +1,5 @@
-# gulp-polymer-build-utils
+# gulp-polymer-build-utils [![Build Status](https://travis-ci.org/Collaborne/gulp-polymer-build-utils.svg?branch=master)](https://travis-ci.org/Collaborne/gulp-polymer-build-utils) [![Greenkeeper badge](https://badges.greenkeeper.io/Collaborne/gulp-polymer-build-utils.svg)](https://greenkeeper.io/)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Collaborne/gulp-polymer-build-utils.svg)](https://greenkeeper.io/)
 Utils to simplify building Polymer applications
 
 See this [blog post](https://medium.com/collaborne-engineering/building-polymer-app-with-gulp-dee266d348df) about the background and functionality of the gulp plugins.
