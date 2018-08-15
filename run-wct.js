@@ -22,9 +22,8 @@ function getDefaultBrowsers() {
  * NB: This is a copy of the wct:local task from web-component-tester, with additional logic to override some configuration settings.
  */
 exports.runWct = function runWct({ suite, browser, debug } = args) {
-	const suitesPaths = suite.map(_suite => `test/${_suite}`);
+	const suitesPaths = suite.map(_suite => `app/test/${_suite}`);
 	const wctConfig = {
-		root: 'app',
 		suites: suitesPaths,
 		plugins: {
 			local: {
