@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/Collaborne/gulp-polymer-build-utils#readme",
   "dependencies": {
+    "ansi-colors": "^4.1.1",
     "babel-preset-es2015": "^6.18.0",
+    "fancy-log": "^1.3.3",
     "gulp-babel": "^6.1.2",
     "gulp-crisper": "^1.1.0",
     "gulp-filter": "^5.0.1",
@@ -30,13 +32,12 @@
     "gulp-rev": "^8.0.0",
     "gulp-rev-replace": "^0.4.3",
     "gulp-size": "^2.1.0",
-    "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "lazypipe": "^1.0.1",
     "merge-stream": "^1.0.1",
     "path": "^0.12.7",
     "polymer-build": "^2.0.0",
-    "web-component-tester": "^6.4.0",
-    "wct-local": "^2.0.16"
+    "wct-local": "^2.0.16",
+    "web-component-tester": "^6.4.0"
   }
 }
