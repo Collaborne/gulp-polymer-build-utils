@@ -8,10 +8,11 @@ const minifyCss = require('gulp-minify-css');
 const uglify = require('gulp-uglify');
 
 const size = require('gulp-size');
-const gutil = require('gulp-util');
+const log = require('fancy-log');
+const c = require('ansi-colors');
 
 function logError(err) {
-	gutil.log(gutil.colors.red('[Error]'), err.toString());
+	log(c.red('[Error]'), err.toString());
 	this.emit('end');
 }
 
